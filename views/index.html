@@ -25,31 +25,6 @@
 </nav>
 
 <main>
-    <div class="card">
-        <div class="card-body">
-            <div class="card-text">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="darkModeSwitch">
-                    <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type = "checkbox" value="" id="protanopia">
-                    <label class="form-check-label" for = "protanopia" >
-                        protanopia
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="deuteranopia">
-                    <label class="form-check-label" for="deuteranopia">
-                        deuteranopia
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="tritanopia">
-                    <label class="form-check-label" for="tritanopia">
-                        tritanopia
-                    </label>
-                </div>
                 <div class="modal fade" id="parametreModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -58,7 +33,28 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Tous les paramètres.
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                                    <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type = "checkbox" value="" id="protanopia">
+                                    <label class="form-check-label" for = "protanopia" >
+                                        protanopia
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="deuteranopia">
+                                    <label class="form-check-label" for="deuteranopia">
+                                        deuteranopia
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="tritanopia">
+                                    <label class="form-check-label" for="tritanopia">
+                                        tritanopia
+                                    </label>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-primary" data-bs-target="#" data-bs-toggle="modal">Page suivante</button>
@@ -66,9 +62,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 </main>
 
 <script src="../scripts/darkMode.js"></script>
