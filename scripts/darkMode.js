@@ -4,9 +4,10 @@ const body = document.body;
 const protanopiaCheckbox = document.getElementById('protanopia');
 const deuteranopiaCheckbox = document.getElementById('deuteranopia');
 const tritanopiaCheckbox = document.getElementById('tritanopia');
+const modal = document.getElementById('parametreModalToggle');
 
 darkModeSwitch.addEventListener('change', () => {
-    if (protanopiaCheckbox.checked || deuteranopiaCheckbox.checked || tritanopiaCheckbox.checked) {
+    if (protanopiaCheckbox.checked || deuteranopiaCheckbox.checked || tritanopiaCheckbox.checked || !(protanopiaCheckbox.checked && deuteranopiaCheckbox.checked && tritanopiaCheckbox.checked)) {
         protanopiaCheckbox.disabled = true;
         deuteranopiaCheckbox.disabled = true;
         tritanopiaCheckbox.disabled = true;
