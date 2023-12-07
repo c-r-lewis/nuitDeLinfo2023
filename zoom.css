@@ -14,7 +14,27 @@
 }
 
 body, html {
-    height: 100%;
     margin: 0;
     overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+section {
+    transition: height 3s ease;
+}
+
+.active {
+    height: 100dvh;
+    background-color: grey;
+    display: block;
+}
+
+section:not(.active) {
+    display: none;
+}
+
+
+
+.scroll-trigger {
+    cursor: pointer;
 }
