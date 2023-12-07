@@ -10,6 +10,9 @@ darkModeSwitch.addEventListener('change', () => {
         protanopiaCheckbox.disabled = true;
         deuteranopiaCheckbox.disabled = true;
         tritanopiaCheckbox.disabled = true;
+        protanopiaCheckbox.checked = false;
+        deuteranopiaCheckbox.checked = false;
+        tritanopiaCheckbox.checked = false;
     }
     const theme = darkModeSwitch.checked ? 'dark' : 'light';
     navbar.classList.toggle('bg-dark', darkModeSwitch.checked);
@@ -28,7 +31,6 @@ protanopiaCheckbox.addEventListener('change', () => {
     if (protanopiaCheckbox.checked) {
         if (darkModeSwitch.checked) {
             protanopiaCheckbox.disabled = true;
-            protanopiaCheckbox.checked = false;
         }
         else {
             deuteranopiaCheckbox.disabled = true;
@@ -47,7 +49,6 @@ deuteranopiaCheckbox.addEventListener('change', () => {
     if (deuteranopiaCheckbox.checked) {
         if (darkModeSwitch.checked) {
             deuteranopiaCheckbox.disabled = true;
-            deuteranopiaCheckbox.checked = false;
         } else {
             protanopiaCheckbox.disabled = true;
             tritanopiaCheckbox.disabled = true;
@@ -65,7 +66,6 @@ tritanopiaCheckbox.addEventListener('change', () => {
     if (tritanopiaCheckbox.checked) {
         if (darkModeSwitch.checked) {
             tritanopiaCheckbox.disabled = true;
-            tritanopiaCheckbox.checked = false;
         } else {
             protanopiaCheckbox.disabled = true;
             deuteranopiaCheckbox.disabled = true;
@@ -90,7 +90,7 @@ function getColorScheme(type) {
     switch (type) {
         case 'protanopia':
             return {
-                bgColor: '#FF0000',
+                bgColor: '#FFFFF0',
                 textColor: '#333333'
             };
         case 'deuteranopia':
