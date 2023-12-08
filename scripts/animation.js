@@ -1,7 +1,20 @@
 
 function zoomIn(element) {
-    element.textContent = "Clicker pour dezoomer";
-    element.classList.toggle("zoomed");
+    if (element.classList.contains("zoomed")) {
+        element.classList.remove("zoomed");
+        element.src = '../ressources/images/board.png';
+        document.querySelectorAll(".poster").forEach(poster => {
+            poster.style.display = "none";
+        });
+    }
+    else {
+        document.querySelectorAll(".poster").forEach(poster => {
+            poster.style.display = "block";
+        });
+        element.classList.add("zoomed");
+        element.src = '../ressources/images/board2.png';
+
+    }
 }
 
 function changeView(idSection) {
