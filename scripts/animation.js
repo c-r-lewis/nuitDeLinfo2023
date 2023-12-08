@@ -1,7 +1,14 @@
-new Typewriter(".typewriter", {})
-    .changeDelay(40)
-    .typeString("J'ai compris") //dans ce typeString, il faut écrire le texte (donc en utilisant ce que fait katia)
-    .start();
+function initTypewriter(selector, delay, text) {
+    new Typewriter(selector, {})
+        .changeDelay(delay)
+        .typeString(text)
+        .start();
+}
+
+// Exemple d'utilisation :
+document.addEventListener('DOMContentLoaded', function () {
+    initTypewriter(".typewriter", 40, "J'ai compris");
+});
 //Pour appliquer ceci à un élément, il faut rajouter class = "typewriter" dans l'élément
 
 function zoomIn(element) {
