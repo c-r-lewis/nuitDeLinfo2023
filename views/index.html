@@ -32,7 +32,7 @@
         const easterEgg = new Konami("easterEgg.html")
     </script>
     <div class="modal fade" id="pauseModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-         tabindex="-1">
+         tabindex="-1" style="min-width: 100dvw">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0" id="4" style="background:linear-gradient(to bottom,#b597db,#726cb4)">
                 <div class="modal-header border-0">
@@ -147,9 +147,9 @@
 
     <div class="container-fluid p-0 m-0">
         <div class="background-image m-0">
-            <div class="row position-relative gx-0" style="max-width: 100%">
+            <div class="row position-relative gx-0" style="min-width: 100dvw">
                 <img data-bs-toggle="modal" href="#exampleModalToggle" onclick="affichageText('0.0.1')" src="../ressources/images/background-sky.png" alt="Desert dystopian" id="backgroundSky" style="width:100vw;" class="bgimg"/>
-                <div class="foreground container-fluid p-0 m-0">
+                <div class="foreground container-fluid p-0 m-0" style="width: 100dvw">
                     <div class="col-md-8 position-absolute bottom-0 d-flex justify-content-end">
                         <div class="mid-background">
                             <a href="page2.html"><img src="../ressources/images/plane.png"  src="../ressources/images/plane.png" alt="Avion" class="position-relative end-5 bgimg"></a>
@@ -164,11 +164,13 @@
             </div>
             <div class="row position-relative">
                 <img src="../ressources/images/background-floor.png" alt="Desert dystopian" class="bgimg"/>
-                <img data-bs-toggle="modal" href="#exampleModalToggle" onclick="affichageText('0.0.0')" src="../ressources/images/screen.png" alt="Ecran" class="position-absolute bottom-0 screen m-0 p-0 bgimg">
+                <img data-bs-toggle="modal" href="#exampleModalToggle" onclick="affichageText('0.0.0')" src="../ressources/images/screen.png" alt="Ecran" class="position-absolute bottom-0 screen m-0 p-0 bgimg" style="width:100dvw">
                 <div class="foreground container-fluid p-0 m-0">
                     <div class="col-4">
                         <img src="../ressources/images/board.png" alt="Pancarte" class="position-absolute bottom-0 bgimg zoom-in" onclick="zoomIn(this)"/>
-                        <img src="../ressources/images/poster.png" alt="Poster" class="position-absolute bgimg" id="poster">
+                        <div id="posterContainer">
+                            <img src="../ressources/images/poster.png" alt="Poster" class="position-absolute bgimg" id="poster">
+                        </div>
                     </div>
                 </div>
             </div>
