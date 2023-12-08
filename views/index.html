@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="../ressources/zoom.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+        .modal-content {
+            background-color: rgba(240, 240, 240, 0);
+        }
+        a {
+            color: inherit;
+        }
+    </style>
 
 </head>
 <body>
@@ -116,26 +124,37 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0">
+                <div class="modal-body text-white fs-5">
+                    <div id="myDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid p-0 m-0">
         <div class="background-image m-0">
             <div class="row position-relative gx-0" style="max-width: 100%">
-                <img src="../ressources/images/background-sky.png" alt="Desert dystopian" id="backgroundSky" style="width:100vw;" class="bgimg"/>
+                <img data-bs-toggle="modal" href="#exampleModalToggle" onclick="affichageText('0.0.1')" src="../ressources/images/background-sky.png" alt="Desert dystopian" id="backgroundSky" style="width:100vw;" class="bgimg"/>
                 <div class="foreground container-fluid p-0 m-0">
                     <div class="col-md-8 position-absolute bottom-0 d-flex justify-content-end">
                         <div class="mid-background">
-                            <img src="../ressources/images/plane.png" alt="Avion" class="position-relative end-5 bgimg">
+                            <a href="page2.html"><img src="../ressources/images/plane.png"  src="../ressources/images/plane.png" alt="Avion" class="position-relative end-5 bgimg"></a>
                         </div>
                     </div>
                     <div class="col-4 position-absolute bottom-0 end-0 d-flex justify-content-end">
                         <div class="mid-background">
-                            <img src="../ressources/images/factory.png" alt="Centrale à charbon" style="max-height: 400px" class="bgimg">
+                            <a href="page3.html"><img src="../ressources/images/factory.png" alt="Centrale à charbon" style="max-height: 400px" class="bgimg"></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row position-relative">
                 <img src="../ressources/images/background-floor.png" alt="Desert dystopian" class="bgimg"/>
-                <img src="../ressources/images/screen.png" alt="Ecran" class="position-absolute bottom-0 screen m-0 p-0 bgimg">
+                <img data-bs-toggle="modal" href="#exampleModalToggle" onclick="affichageText('0.0.0')" src="../ressources/images/screen.png" alt="Ecran" class="position-absolute bottom-0 screen m-0 p-0 bgimg">
                 <div class="foreground container-fluid p-0 m-0">
                     <div class="col-4">
                         <img src="../ressources/images/board.png" alt="Pancarte" class="position-absolute bottom-0 bgimg zoom-in" onclick="zoomIn(this)"/>
@@ -145,6 +164,9 @@
         </div>
     </div>
 </main>
+
+<script src="../scripts/storyLogics.js"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
 <script src="../scripts/darkMode.js"></script>
 <script src="https://unpkg.com/color-blind"></script>
