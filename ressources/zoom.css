@@ -85,9 +85,3 @@ section:not(.active) {
     left: 40%;
     bottom: 90%;
 }
-
-@media (max-width: 767px) {
-    .bgimg {
-        transform: rotate(90deg);
-    }
-}
