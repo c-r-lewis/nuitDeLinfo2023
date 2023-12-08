@@ -46,13 +46,13 @@ section:not(.active) {
 }
 
 .background-image {
-    height: 100dvh;
-    width: 100dvw;
+    max-height: 100dvh;
+    max-width: 100dvw;
     object-fit: cover;
     position: absolute;
 }
 
-.factory {
+.mid-background {
     z-index: 5;
     position: relative;
 }
