@@ -2,18 +2,11 @@
 function zoomIn(element) {
     if (element.classList.contains("zoomed")) {
         element.classList.remove("zoomed");
-        element.src = '../ressources/images/board.png';
-        document.querySelectorAll(".poster").forEach(poster => {
-            poster.style.display = "none";
-        });
+        element.src = "../ressources/images/board.png";
     }
     else {
-        document.querySelectorAll(".poster").forEach(poster => {
-            poster.style.display = "block";
-        });
+        element.src = "../ressources/images/board2.png";
         element.classList.add("zoomed");
-        element.src = '../ressources/images/board2.png';
-
     }
 }
 
