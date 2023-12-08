@@ -27,11 +27,15 @@
     </div>
 </nav>
 <main>
+    <script src="../scripts/konami.js"></script>
+    <script>
+        const easterEgg = new Konami("easterEgg.html")
+    </script>
     <div class="modal fade" id="pauseModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
          tabindex="-1" style="min-width: 100dvw">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0" style="background:linear-gradient(to bottom,#b597db,#726cb4)">
-                <div class="modal-header border-0">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h1 class="modal-title fs-5" id="pauseModalToggleLable">Pause Menu</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -178,4 +182,3 @@
 <script src="../scripts/animation.js"></script>
 </body>
 </html>
-
