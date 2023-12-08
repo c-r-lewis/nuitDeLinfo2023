@@ -57,6 +57,9 @@ section:not(.active) {
     position: relative;
 }
 
+.screen {
+    z-index: 10;
+}
 .foreground {
     z-index: 1;
 }
