@@ -3,17 +3,18 @@ const navbar = document.querySelector(".navbar");
 const body = document.body;
 const protanopiaCheckbox = document.getElementById('protanopia');
 const deuteranopiaCheckbox = document.getElementById('deuteranopia');
-const tritanopiaCheckbox = document.getElementById('tritanopia');
-const modal = document.getElementById('parametreModalToggle');
+const noiretblancCheckbox = document.getElementById('noir et blanc');
+const bgimg = document.querySelectorAll(".bgimg");
+
 
 darkModeSwitch.addEventListener('change', () => {
-    if (protanopiaCheckbox.checked || deuteranopiaCheckbox.checked || tritanopiaCheckbox.checked || !(protanopiaCheckbox.checked && deuteranopiaCheckbox.checked && tritanopiaCheckbox.checked)) {
+    if (protanopiaCheckbox.checked || deuteranopiaCheckbox.checked || noiretblancCheckbox.checked || !(protanopiaCheckbox.checked && deuteranopiaCheckbox.checked && noiretblancCheckbox.checked)) {
         protanopiaCheckbox.disabled = true;
         deuteranopiaCheckbox.disabled = true;
-        tritanopiaCheckbox.disabled = true;
+        noiretblancCheckbox.disabled = true;
         protanopiaCheckbox.checked = false;
         deuteranopiaCheckbox.checked = false;
-        tritanopiaCheckbox.checked = false;
+        noiretblancCheckbox.checked = false;
     }
     const theme = darkModeSwitch.checked ? 'dark' : 'light';
     navbar.classList.toggle('bg-dark', darkModeSwitch.checked);
@@ -24,7 +25,7 @@ darkModeSwitch.addEventListener('change', () => {
     if (!darkModeSwitch.checked) {
         protanopiaCheckbox.disabled = false;
         deuteranopiaCheckbox.disabled = false;
-        tritanopiaCheckbox.disabled = false;
+        noiretblancCheckbox.disabled = false;
     }
 })
 
@@ -35,14 +36,20 @@ protanopiaCheckbox.addEventListener('change', () => {
         }
         else {
             deuteranopiaCheckbox.disabled = true;
-            tritanopiaCheckbox.disabled = true;
+            noiretblancCheckbox.disabled = true;
         }
         updateColors('protanopia');
+        bgimg.forEach(imagep => {
+            imagep.style.filter = 'hue-rotate(15deg)';
+        });
     }
     else {
         deuteranopiaCheckbox.disabled = false;
-        tritanopiaCheckbox.disabled = false;
+        noiretblancCheckbox.disabled = false;
         updateColors('base');
+        bgimg.forEach(imagep => {
+            imagep.style.filter = 'hue-rotate(0deg)';
+        });
     }
 });
 
@@ -52,31 +59,43 @@ deuteranopiaCheckbox.addEventListener('change', () => {
             deuteranopiaCheckbox.disabled = true;
         } else {
             protanopiaCheckbox.disabled = true;
-            tritanopiaCheckbox.disabled = true;
+            noiretblancCheckbox.disabled = true;
         }
         updateColors('deuteranopia');
+        bgimg.forEach(imaged => {
+            imaged.style.filter = 'hue-rotate(345deg)';
+        });
     }
     else {
         protanopiaCheckbox.disabled = false;
-        tritanopiaCheckbox.disabled = false;
+        noiretblancCheckbox.disabled = false;
         updateColors('base');
+        bgimg.forEach(imaged => {
+            imaged.style.filter = 'hue-rotate(0deg)';
+        });
     }
 });
 
-tritanopiaCheckbox.addEventListener('change', () => {
-    if (tritanopiaCheckbox.checked) {
+noiretblancCheckbox.addEventListener('change', () => {
+    if (noiretblancCheckbox.checked) {
         if (darkModeSwitch.checked) {
-            tritanopiaCheckbox.disabled = true;
+            noiretblancCheckbox.disabled = true;
         } else {
             protanopiaCheckbox.disabled = true;
             deuteranopiaCheckbox.disabled = true;
         }
         updateColors('tritanopia');
+        bgimg.forEach(imageld => {
+            imageld.style.filter = 'grayscale(100%)';
+        });
     }
     else {
         protanopiaCheckbox.disabled = false;
         deuteranopiaCheckbox.disabled = false;
         updateColors('base');
+        bgimg.forEach(imageld => {
+            imageld.style.filter = 'grayscale(0%)';
+        });
     }
 });
 
