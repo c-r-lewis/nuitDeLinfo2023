@@ -1,7 +1,13 @@
 
 function zoomIn(element) {
-    element.textContent = "Clicker pour dezoomer";
-    element.classList.toggle("zoomed");
+    if (element.classList.contains("zoomed")) {
+        element.classList.remove("zoomed");
+        element.src = "../ressources/images/board.png";
+    }
+    else {
+        element.src = "../ressources/images/board2.png";
+        element.classList.add("zoomed");
+    }
 }
 
 function changeView(idSection) {
