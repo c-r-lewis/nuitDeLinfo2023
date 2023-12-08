@@ -1,3 +1,7 @@
+:root {
+    --top-to-ground-height: 90dvh;
+}
+
 .zoom-in {
     transition-property: transform;
     transition-duration: 0.3s;
@@ -13,12 +17,11 @@
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-body, html {
+body {
     margin: 0;
+    height: 100vh;
+    width: 100dvw;
     overflow: hidden;
-    scroll-behavior: smooth;
-    min-height: 100dvh;
-    min-width: 100dvw;
 }
 
 section {
@@ -42,14 +45,27 @@ section:not(.active) {
     z-index: 0;
 }
 
-.background-img {
-    height: 100%;
-    width: 100%;
+.background-image {
+    height: 100dvh;
+    width: 100dvw;
+    object-fit: cover;
+    position: absolute;
 }
 
+.factory {
+    z-index: 5;
+    position: relative;
+}
 
+.foreground {
+    z-index: 1;
+}
 
 .parallax img {
     position: absolute;
+}
+
+.row1 {
+    height: calc(100dvh - var(--top-to-ground-height));
 }
 
