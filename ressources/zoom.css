@@ -1,5 +1,5 @@
 :root {
-    --top-to-ground-height: 90dvh;
+    --nav-height: 735px;
 }
 
 .zoom-in {
@@ -7,6 +7,10 @@
     transition-duration: 0.3s;
     transition-timing-function: ease;
     transform-origin: center center;
+}
+
+#backgroundSky {
+    max-height: 100%;
 }
 
 .zoomed {
@@ -46,7 +50,8 @@ section:not(.active) {
 }
 
 .background-image {
-    max-height: 100dvh;
+    min-height: 100dvh;
+    margin-top: 35px;
     max-width: 100dvw;
     object-fit: cover;
     position: absolute;
@@ -68,7 +73,7 @@ section:not(.active) {
     position: absolute;
 }
 
-.row1 {
-    height: calc(100dvh - var(--top-to-ground-height));
+.navbar {
+    height: 35px;
 }
 
