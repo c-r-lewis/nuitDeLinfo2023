@@ -1,3 +1,4 @@
+
 function zoomIn(element) {
     element.textContent = "Clicker pour dezoomer";
     element.classList.toggle("zoomed");
