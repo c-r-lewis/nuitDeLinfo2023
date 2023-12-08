@@ -12,31 +12,17 @@ const gameFlow = [
     },
     {
         id : "1.1.0" , //Avion
-        text : "Il semblerait que les habitants d’Odothea se déplaçaient principalement en avion. Inquiétant étant donné que sur terre les <a href= \"https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub\"> avions émettent 2 % d’émission des GES <a>. C’est certes moins que l’émission de GES du numérique, mais pour un trajet similaire, un <a href=\"https://www.greenpeace.fr/quel-moyen-de-transport-ecologique-adopter/\"> avion consomme six fois plus d’énergie que le train.<a>"
-    },
-    {
-        id : "1.1.1",
-        text : "Il faut améliorer la conception de l’aviation et sa consommation pour réduire son impact. Par exemple, le premier secteur économique à se doter d’un <a href=\"https://www.ecologie.gouv.fr/sites/default/files/plaquette%20GMBMpap.pdf\">mécanisme universel et contraignant de maîtrise de ses émissions de CO2</a> est l’aviation, mais ça ne suffira pas sans <a href=\"https://www.greenpeace.fr/voyage-ecologique/\"> adapter nos mobilités en fonction de chaque trajet </a> et sans que les politiques en placent n’apportent d’éléments favorisant les consommateurs à choisir ces solutions."
+        text : "Il semblerait que les habitants d’Odothea se déplaçaient principalement en avion. Inquiétant étant donné que sur terre les <a href= \"https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub\"> avions émettent 2 % d’émission des GES <a>. C’est certes moins que l’émission de GES du numérique, mais pour un trajet similaire, un <a href=\"https://www.greenpeace.fr/quel-moyen-de-transport-ecologique-adopter/\"> avion consomme six fois plus d’énergie que le train.<a> Il faut améliorer la conception de l’aviation et sa consommation pour réduire son impact. Par exemple, le premier secteur économique à se doter d’un <a href=\"https://www.ecologie.gouv.fr/sites/default/files/plaquette%20GMBMpap.pdf\">mécanisme universel et contraignant de maîtrise de ses émissions de CO2</a> est l’aviation, mais ça ne suffira pas sans <a href=\"https://www.greenpeace.fr/voyage-ecologique/\"> adapter nos mobilités en fonction de chaque trajet </a> et sans que les politiques en placent n’apportent d’éléments favorisant les consommateurs à choisir ces solutions."
     },
     {
         id : "1.2.0", //Vélo cassé
-        text : "Dommage que ce vélo n’ait pas plus servi, il correspond à une solution de mobilité idéale, en effet son utilisation permettrait d’<a href=\"https://www.ecoco2.com/blog/courts-trajets-a-velo-des-economies-demissions-de-ges-importantes/\"> économiser 700 millions de tonnes d'émissions de GES</a> chaque année si nous effectuions quotidiennement nos courts trajets à vélo."
-    },
-    {
-        id : "1.2.1",
-        text : "Hors, pour favoriser l’utilisation de la bicyclette, il faut des limitations sur l’usage de la voiture en milieu urbain, en effet des structures urbaines appropriées au cyclisme ne suffirait pas, car le danger principal pour les cyclistes provient de <a href=<\"https://www.cairn.info/revue-les-cahiers-de-mediologie-1998-1-page-151.htm#nn3\"> l’énergie cinétique développée par les véhicules à moteur, qui sont impliqués dans 9 cas d’accident sur 10</a>."
+        text : "Dommage que ce vélo n’ait pas plus servi, il correspond à une solution de mobilité idéale, en effet son utilisation permettrait d’<a href=\"https://www.ecoco2.com/blog/courts-trajets-a-velo-des-economies-demissions-de-ges-importantes/\"> économiser 700 millions de tonnes d'émissions de GES</a> chaque année si nous effectuions quotidiennement nos courts trajets à vélo. Hors, pour favoriser l’utilisation de la bicyclette, il faut des limitations sur l’usage de la voiture en milieu urbain, en effet des structures urbaines appropriées au cyclisme ne suffirait pas, car le danger principal pour les cyclistes provient de <a href=<\"https://www.cairn.info/revue-les-cahiers-de-mediologie-1998-1-page-151.htm#nn3\"> l’énergie cinétique développée par les véhicules à moteur, qui sont impliqués dans 9 cas d’accident sur 10</a>."
+
     },
     {
         id : "1.3.0", // Voiture
-        text : "Odothea, elle aussi, utilisait la mobilité motorisée individuelle au quotidien. Sur terre, selon un rapport de l'Agence européenne pour l'environnement, le <a href=\"https://www.europarl.europa.eu/news/fr/headlines/society/20190313STO31218/emissions-de-co2-des-voitures-faits-et-chiffres-infographie\"> transport était responsable d'environ un quart des émissions totales de CO2 de l'UE en 2019, dont 71,7 % provenaient du transport routier</a>."
-    },
-    {
-        id : "1.3.1", 
-        text : "Sur terre, en 2019, le parc français routier comprenait <a href=\"https://www.notre-environnement.gouv.fr/themes/climat/les-emissions-de-gaz-a-effet-de-serre-et-l-empreinte-carbone-ressources/article/les-emissions-de-gaz-a-effet-de-serre-du-secteur-des-transports\">44,4 millions de véhicules dont 85 % de voitures particulières</a>. Il semblerait que la diminution de GES liés aux transports peut effectivement être plus complexe que d’autres secteurs."
-    },
-    {
-        id : "1.3.2",
-        text: "Il n’existe pas une seule solution, mais une combinaison de quatre types de politiques de réduction des GES : taxer les carburants, réglementer l’utilisation des véhicules plus polluants sur leur territoire, améliorer l’offre de transport en commun et mettre en place des politiques pour freiner l’étalement urbain. Ainsi, cette <a href=\"https://lactualite.com/actualites/etude-diminuer-les-ges-des-transports-de-22-sans-affecter-la-qualite-de-vie/\">combinaison de solutions permettrait une réduction de 31% de GES</a>."
+        text : "Odothea, elle aussi, utilisait la mobilité motorisée individuelle au quotidien. Sur terre, selon un rapport de l'Agence européenne pour l'environnement, le <a href=\"https://www.europarl.europa.eu/news/fr/headlines/society/20190313STO31218/emissions-de-co2-des-voitures-faits-et-chiffres-infographie\"> transport était responsable d'environ un quart des émissions totales de CO2 de l'UE en 2019, dont 71,7 % provenaient du transport routier</a>.Sur terre, en 2019, le parc français routier comprenait <a href=\"https://www.notre-environnement.gouv.fr/themes/climat/les-emissions-de-gaz-a-effet-de-serre-et-l-empreinte-carbone-ressources/article/les-emissions-de-gaz-a-effet-de-serre-du-secteur-des-transports\">44,4 millions de véhicules dont 85 % de voitures particulières</a>. Il semblerait que la diminution de GES liés aux transports peut effectivement être plus complexe que d’autres secteurs.Il n’existe pas une seule solution, mais une combinaison de quatre types de politiques de réduction des GES : taxer les carburants, réglementer l’utilisation des véhicules plus polluants sur leur territoire, améliorer l’offre de transport en commun et mettre en place des politiques pour freiner l’étalement urbain. Ainsi, cette <a href=\"https://lactualite.com/actualites/etude-diminuer-les-ges-des-transports-de-22-sans-affecter-la-qualite-de-vie/\">combinaison de solutions permettrait une réduction de 31% de GES</a>."
+
     },
     {
         id : "2.1.0", //Centrale à charbon
@@ -52,15 +38,25 @@ const gameFlow = [
     },
 ];
 
-// Fonction pour récupérer un élément de gameFlow par son ID
 function getGameflowById(id) {
     return gameFlow.find(item => item.id === id);
 }
 
-// Utilisation de la fonction pour récupérer un élément par son ID
-function affichageText(id){
-    const textScene = getGameflowById(id);
+function initTypewriter(selector, delay, text) {
+    new Typewriter(selector, {})
+        .changeDelay(delay)
+        .typeString(text)
+        .start();
+}
 
-    var div = document.getElementById("myDiv");
-    div.innerHTML += textScene.text;    
+function affichageText(id) {
+    const textScene = getGameflowById(id);
+    const div = document.getElementById('myDiv');
+    div.innerHTML = ''; // Vide le contenu actuel du div
+
+    var span = document.createElement('span');
+    span.id = 'typewriterText';
+    div.appendChild(span);
+
+    initTypewriter('#' + span.id, 50, textScene.text);
 }
