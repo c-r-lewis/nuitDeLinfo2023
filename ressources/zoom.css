@@ -23,6 +23,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     height: 100vh;
     width: 100dvw;
     overflow: hidden;
@@ -83,4 +84,10 @@ section:not(.active) {
     width: 12rem;
     left: 40%;
     bottom: 90%;
+}
+
+@media (max-width: 767px) {
+    .bgimg {
+        transform: rotate(90deg);
+    }
 }
