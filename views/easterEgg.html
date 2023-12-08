@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            cursor: none !important;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #svg-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .star {
+            fill: white;
+            r: 1;
+            transition: r 0.2s;
+        }
+    </style>
+    <title>Image qui suit la souris et les touches du clavier</title>
+</head>
+<body>
+
+<div id="svg-container">
+    <svg id="svg-image" width="100%" height="100%">
+        <defs>
+            <pattern id="imagePattern" x="0" y="0" width="1" height="1">
+                <image id="followingImage" href="/images/fusee.png" width="100" height="100" />
+            </pattern>
+        </defs>
+
+        <rect id="backgroundRect" width="100%" height="100%" fill="url(#imagePattern)" />
+
+        <g id="starsContainer"></g>
+    </svg>
+</div>
+
+<script>
+    const backgroundRect = document.getElementById('backgroundRect');
+    const followingImage = document.getElementById('followingImage');
+    const starsContainer = document.getElementById('starsContainer');
+
+    backgroundRect.addEventListener('mousemove', updateImagePosition);
+
+    document.addEventListener('keydown', handleKeyboardInput);
+
+    function updateImagePosition(event) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        followingImage.setAttribute('x', mouseX - backgroundRect.getBoundingClientRect().left - followingImage.width.baseVal.value / 2);
+        followingImage.setAttribute('y', mouseY - backgroundRect.getBoundingClientRect().top - followingImage.height.baseVal.value / 2);
+
+        generateStar(mouseX, mouseY);
+    }
+
+    function handleKeyboardInput(event) {
+        const step = 10;
+
+        let imageX = parseInt(followingImage.getAttribute('x')) || 0;
+        let imageY = parseInt(followingImage.getAttribute('y')) || 0;
+
+        switch (event.key) {
+            case 'ArrowUp':
+                imageY -= step;
+                break;
+            case 'ArrowDown':
+                imageY += step;
+                break;
+            case 'ArrowLeft':
+                imageX -= step;
+                break;
+            case 'ArrowRight':
+                imageX += step;
+                break;
+        }
+
+        followingImage.setAttribute('x', imageX);
+        followingImage.setAttribute('y', imageY);
+        generateStar(imageX, imageY);
+    }
+
+    function generateStar(x, y) {
+        const star = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        star.classList.add('star');
+        star.setAttribute('cx', x);
+        star.setAttribute('cy', y);
+        starsContainer.appendChild(star);
+
+        setTimeout(() => {
+            star.setAttribute('r', Math.random() * 2 + 1); // rayon aléatoire entre 1 et 3
+        }, 10);
+
+        setTimeout(() => {
+            starsContainer.removeChild(star);
+        }, 1500);
+    }
+</script>
+
+</body>
+</html>
