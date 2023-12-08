@@ -1,0 +1,40 @@
+.zoom-in {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transform-origin: center center;
+}
+
+.zoomed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+body, html {
+    margin: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+section {
+    transition: height 3s ease;
+}
+
+.active {
+    height: 100dvh;
+    background-color: grey;
+    display: block;
+}
+
+section:not(.active) {
+    display: none;
+}
+
+
+
+.scroll-trigger {
+    cursor: pointer;
+}
