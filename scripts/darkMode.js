@@ -5,7 +5,7 @@ const protanopiaCheckbox = document.getElementById('protanopia');
 const deuteranopiaCheckbox = document.getElementById('deuteranopia');
 const noiretblancCheckbox = document.getElementById('noir et blanc');
 const bgimg = document.querySelectorAll(".bgimg");
-
+const main = document.getElementsByClassName('.menu')
 
 darkModeSwitch.addEventListener('change', () => {
     if (protanopiaCheckbox.checked || deuteranopiaCheckbox.checked || noiretblancCheckbox.checked || !(protanopiaCheckbox.checked && deuteranopiaCheckbox.checked && noiretblancCheckbox.checked)) {
@@ -42,6 +42,9 @@ protanopiaCheckbox.addEventListener('change', () => {
         bgimg.forEach(imagep => {
             imagep.style.filter = 'hue-rotate(15deg)';
         });
+        main.forEach(menu => {
+            menu.style.filter = 'hue-rotate(15deg)';
+        });
     }
     else {
         deuteranopiaCheckbox.disabled = false;
@@ -49,6 +52,9 @@ protanopiaCheckbox.addEventListener('change', () => {
         updateColors('base');
         bgimg.forEach(imagep => {
             imagep.style.filter = 'hue-rotate(0deg)';
+        });
+        main.forEach(menu => {
+            menu.style.filter = 'hue-rotate(0deg)';
         });
     }
 });
@@ -65,6 +71,9 @@ deuteranopiaCheckbox.addEventListener('change', () => {
         bgimg.forEach(imaged => {
             imaged.style.filter = 'hue-rotate(345deg)';
         });
+        main.forEach(menu => {
+            menu.style.filter = 'hue-rotate(345deg)';
+        });
     }
     else {
         protanopiaCheckbox.disabled = false;
@@ -72,6 +81,9 @@ deuteranopiaCheckbox.addEventListener('change', () => {
         updateColors('base');
         bgimg.forEach(imaged => {
             imaged.style.filter = 'hue-rotate(0deg)';
+        });
+        main.forEach(menu => {
+            menu.style.filter = 'hue-rotate(0deg)';
         });
     }
 });
@@ -88,6 +100,9 @@ noiretblancCheckbox.addEventListener('change', () => {
         bgimg.forEach(imageld => {
             imageld.style.filter = 'grayscale(100%)';
         });
+        main.forEach(menu => {
+            menu.style.filter = 'grayscale(100%)';
+        });
     }
     else {
         protanopiaCheckbox.disabled = false;
@@ -95,6 +110,9 @@ noiretblancCheckbox.addEventListener('change', () => {
         updateColors('base');
         bgimg.forEach(imageld => {
             imageld.style.filter = 'grayscale(0%)';
+        });
+        main.forEach(menu => {
+            menu.style.filter = 'grayscale(0%)';
         });
     }
 });
