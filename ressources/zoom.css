@@ -17,6 +17,8 @@ body, html {
     margin: 0;
     overflow: hidden;
     scroll-behavior: smooth;
+    min-height: 100dvh;
+    min-width: 100dvw;
 }
 
 section {
@@ -33,8 +35,21 @@ section:not(.active) {
     display: none;
 }
 
-
-
-.scroll-trigger {
-    cursor: pointer;
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
 }
+
+.background-img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.parallax img {
+    position: absolute;
+}
+
