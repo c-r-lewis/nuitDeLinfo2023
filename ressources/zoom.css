@@ -77,3 +77,10 @@ section:not(.active) {
     height: 35px;
 }
 
+#poster {
+    transform: rotate(90deg);
+    display: none;
+    width: 12rem;
+    left: 40%;
+    bottom: 90%;
+}
