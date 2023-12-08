@@ -5,7 +5,10 @@ const protanopiaCheckbox = document.getElementById('protanopia');
 const deuteranopiaCheckbox = document.getElementById('deuteranopia');
 const noiretblancCheckbox = document.getElementById('noir et blanc');
 const bgimg = document.querySelectorAll(".bgimg");
-const main = document.getElementsByClassName('.menu')
+const pauseModalToggle = document.getElementById('4');
+const parametreModalToggle = document.getElementById('3');
+const pause2ModalToggle = document.getElementById('1');
+const nousModalToggle = document.getElementById('2');
 
 darkModeSwitch.addEventListener('change', () => {
     if (protanopiaCheckbox.checked || deuteranopiaCheckbox.checked || noiretblancCheckbox.checked || !(protanopiaCheckbox.checked && deuteranopiaCheckbox.checked && noiretblancCheckbox.checked)) {
@@ -42,9 +45,10 @@ protanopiaCheckbox.addEventListener('change', () => {
         bgimg.forEach(imagep => {
             imagep.style.filter = 'hue-rotate(15deg)';
         });
-        main.forEach(menu => {
-            menu.style.filter = 'hue-rotate(15deg)';
-        });
+        pauseModalToggle.style.filter = 'hue-rotate(15deg)';
+        parametreModalToggle.style.filter = 'hue-rotate(15deg)';
+        pause2ModalToggle.style.filter = 'hue-rotate(15deg)';
+        nousModalToggle.style.filter = 'hue-rotate(15deg)';
     }
     else {
         deuteranopiaCheckbox.disabled = false;
@@ -53,9 +57,10 @@ protanopiaCheckbox.addEventListener('change', () => {
         bgimg.forEach(imagep => {
             imagep.style.filter = 'hue-rotate(0deg)';
         });
-        main.forEach(menu => {
-            menu.style.filter = 'hue-rotate(0deg)';
-        });
+        pauseModalToggle.style.filter = 'hue-rotate(0deg)';
+        parametreModalToggle.style.filter = 'hue-rotate(0deg)';
+        pause2ModalToggle.style.filter = 'hue-rotate(0deg)';
+        nousModalToggle.style.filter = 'hue-rotate(0deg)';
     }
 });
 
@@ -71,9 +76,10 @@ deuteranopiaCheckbox.addEventListener('change', () => {
         bgimg.forEach(imaged => {
             imaged.style.filter = 'hue-rotate(345deg)';
         });
-        main.forEach(menu => {
-            menu.style.filter = 'hue-rotate(345deg)';
-        });
+        pauseModalToggle.style.filter = 'hue-rotate(345deg)';
+        parametreModalToggle.style.filter = 'hue-rotate(345deg)';
+        pause2ModalToggle.style.filter = 'hue-rotate(345deg)';
+        nousModalToggle.style.filter = 'hue-rotate(345deg)';
     }
     else {
         protanopiaCheckbox.disabled = false;
@@ -82,9 +88,10 @@ deuteranopiaCheckbox.addEventListener('change', () => {
         bgimg.forEach(imaged => {
             imaged.style.filter = 'hue-rotate(0deg)';
         });
-        main.forEach(menu => {
-            menu.style.filter = 'hue-rotate(0deg)';
-        });
+        pauseModalToggle.style.filter = 'hue-rotate(0deg)';
+        parametreModalToggle.style.filter = 'hue-rotate(0deg)';
+        pause2ModalToggle.style.filter = 'hue-rotate(0deg)';
+        nousModalToggle.style.filter = 'hue-rotate(0deg)';
     }
 });
 
@@ -100,9 +107,10 @@ noiretblancCheckbox.addEventListener('change', () => {
         bgimg.forEach(imageld => {
             imageld.style.filter = 'grayscale(100%)';
         });
-        main.forEach(menu => {
-            menu.style.filter = 'grayscale(100%)';
-        });
+        pauseModalToggle.style.filter = 'grayscale(100%)';
+        parametreModalToggle.style.filter = 'grayscale(100%)';
+        pause2ModalToggle.style.filter = 'grayscale(100%)';
+        nousModalToggle.style.filter = 'grayscale(100%)';
     }
     else {
         protanopiaCheckbox.disabled = false;
@@ -111,9 +119,11 @@ noiretblancCheckbox.addEventListener('change', () => {
         bgimg.forEach(imageld => {
             imageld.style.filter = 'grayscale(0%)';
         });
-        main.forEach(menu => {
-            menu.style.filter = 'grayscale(0%)';
-        });
+        pauseModalToggle.style.filter = 'grayscale(0%)';
+        parametreModalToggle.style.filter = 'grayscale(0%)';
+        pause2ModalToggle.style.filter = 'grayscale(0%)';
+        nousModalToggle.style.filter = 'grayscale(0%)';
+
     }
 });
 
