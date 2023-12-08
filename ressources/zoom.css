@@ -11,43 +11,16 @@
 
 .zoomed {
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform-origin: center;
-    transform: translate(-50%, -125%) scale(2.2);
-    transition-timing-function: linear;
-}
-
-.poster {
-    display: none;
-}
-
-#poster1 {
     top: 50%;
-    left: 24%;
-    transform: translate(-50%, -45%);
-    z-index: 30;
-}
-
-#poster2, #poster3 {
-    transform: rotate(90deg);
     left: 50%;
-    z-index: 30;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
-
-
-#poster3 {
-    top: 36%;
-}
 body {
     margin: 0;
     height: 100vh;
     width: 100dvw;
-    overflow: hidden;
-}
-
-#pannel {
     overflow: hidden;
 }
 
